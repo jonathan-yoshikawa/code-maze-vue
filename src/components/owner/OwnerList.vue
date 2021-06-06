@@ -4,7 +4,7 @@
       <b-col
         md="2"
         offset-md="10">
-        <a href="#">Create owner</a>
+        <RouterLink :to="{ name: 'OwnerCreate'}" >Create owner</RouterLink>
       </b-col>
     </b-row>
     <br>
@@ -72,7 +72,7 @@ export default {
       this.$router.push({ name: 'OwnerDetails', params: { id: ownerId } })
     },
     updateOwner (ownerId) {
-      console.log('update', ownerId)
+      this.$router.push({ name: 'OwnerUpdate', params: { id: ownerId } })
     },
     deleteOwner (ownerId) {
       this.selectedOwnerId = ownerId
